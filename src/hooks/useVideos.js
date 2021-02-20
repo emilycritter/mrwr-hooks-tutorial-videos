@@ -8,7 +8,7 @@ const useVideos = (defaultSearchTerm) => {
 
   useEffect(() => {
     search(defaultSearchTerm);
-  }, []); // Runs on initial render only (similar to componentDidMount)
+  }, [defaultSearchTerm]);
 
   const search = async (term) => {
     const response = await youtube.get('/search', {
